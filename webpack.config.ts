@@ -5,7 +5,7 @@ import { BuildMode, BuildPaths } from 'config/build/types/config';
 
 const mode: BuildMode = 'development' ; //process.env.NODE_ENV === 'production' ? 'production' : 'development';
 const paths: BuildPaths = {
-  entry: path.resolve(__dirname, 'src', 'index.ts'),
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   build: path.resolve(__dirname, 'dist'),
   htmlTemplate: path.resolve(__dirname, 'public', 'index.html'),
 };
