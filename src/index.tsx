@@ -1,7 +1,12 @@
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
-import { Counter } from './components/Counter';
+import App from "./App";
 
-const rootNode = document.getElementById('app')!;
+const rootNode = document.getElementById("app")!;
 const root = createRoot(rootNode);
-root.render(<Counter />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);

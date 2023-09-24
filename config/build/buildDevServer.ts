@@ -8,7 +8,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     static: {
       directory: path.join(__dirname, 'public'),
     },
-    compress: true,
+    historyApiFallback: true,
     port: port,
     open: true,
   };
