@@ -1,10 +1,10 @@
 import { FC, Suspense, lazy, useContext, useState } from "react";
 import "./styles/index.scss";
 import { Link, Route, Routes } from "react-router-dom";
-import { useTheme } from "./context/useTheme";
-import { classNames } from "./helpers/classNames";
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
+import { useTheme } from "app/providers/ThemeProvider/index";
+import { classNames } from "shared/lib/classNames/classNames";
+const Home = lazy(() => import("pages/HomePage/index"));
+const About = lazy(() => import("pages/AboutPage/index"));
 
 const App: FC = () => {
   const {theme, switchTheme} = useTheme();
