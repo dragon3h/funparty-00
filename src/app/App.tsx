@@ -7,7 +7,7 @@ import { AppRouter } from "./providers/router";
 import { NavBar } from "widgets/NavBar";
 
 const App: FC = () => {
-  const { theme, switchTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <main
@@ -18,7 +18,6 @@ const App: FC = () => {
       ])}
     >
       <NavBar />
-      <button onClick={switchTheme}>Switch Theme</button>
       <AppRouter />
     </main>
   );
