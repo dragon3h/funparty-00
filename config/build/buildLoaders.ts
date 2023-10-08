@@ -43,5 +43,19 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     ],
   };
 
-  return [typescriptLoader, cssLoader, svgLoader, fileLoader];
+  const babelLoader = {
+    test: /\.(js|jsx|ts|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+          ["i18next-extract", { locales: ['en', 'uk'], keyAsDefaultValue: true }],
+        ]
+      }
+    }
+  };
+
+  return [babelLoader, typescriptLoader, cssLoader, svgLoader, fileLoader];
 }

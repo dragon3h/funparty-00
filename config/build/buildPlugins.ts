@@ -1,6 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { ProgressPlugin, WebpackPluginInstance, DefinePlugin } from "webpack";
+import { ProgressPlugin, WebpackPluginInstance, DefinePlugin, HotModuleReplacementPlugin } from "webpack";
 import { BuildOptions } from "./types/config";
 
 export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstance[] {
@@ -20,10 +20,13 @@ export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstanc
      __IS_DEV__: JSON.stringify(isDev),
   });
 
+  const hmrPlugin = new HotModuleReplacementPlugin();
+
   return [
     progressPlugin,
     htmlWebpackPlugin,
     miniCssExtractPlugin,
-    definePlugin
+    definePlugin,
+    hmrPlugin
   ];
 }
