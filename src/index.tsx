@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./app/App";
 import { ThemeProvider } from "app/providers/ThemeProvider/index";
+import "shared/config/i18n/i18n";
 
 const rootNode = document.getElementById("app")!;
 const root = createRoot(rootNode);

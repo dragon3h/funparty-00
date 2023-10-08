@@ -1,12 +1,17 @@
 import { FC } from 'react';
 import slc from './ThemeSwitcher.module.scss';
 import { useTheme } from 'app/providers/ThemeProvider';
-import darkTheme from 'shared/assets/icons/dark-theme.svg';
+import DarkIcon from 'shared/assets/icons/dark-theme.svg';
+import LightIcon from 'shared/assets/icons/light-theme.svg';
+import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 export const ThemeSwitcher: FC = () => {
   const { theme, switchTheme } = useTheme();
-  
+
   return (
-    <button onClick={switchTheme}>Switch Theme</button>
+    <Button onClick={switchTheme} themeButton={ThemeButton.CLEAR}>
+      {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+    </Button>
   );
 }
