@@ -41,6 +41,13 @@ module.exports = {
         "react/jsx-uses-react": "off",
         "react/jsx-props-no-spreading": "warn",
         'no-underscore-dangle': 'off',
+        '@typescript-eslint/comma-dangle': ["error", {
+            "arrays": "never",
+            "objects": "always",
+            "imports": "never",
+            "exports": "never",
+            "functions": "never"
+        }],
         "@typescript-eslint/no-floating-promises": "warn",
         "@typescript-eslint/strict-boolean-expressions": "warn",
         'no-unused-vars': 'warn',

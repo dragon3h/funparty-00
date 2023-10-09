@@ -12,7 +12,7 @@ const App: FC = () => {
 
   return (
     <main
-      className={classNames('app', { hovered: false, sdffdsdf: true }, [
+      className={classNames('app', { hovered: false, sdffdsdf: true, }, [
         theme,
         'abc',
         '222'

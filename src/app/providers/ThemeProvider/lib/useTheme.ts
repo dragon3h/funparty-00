@@ -7,7 +7,7 @@ interface UseThemeResult {
 }
 
 export const useTheme = (): UseThemeResult => {
-  const { theme = Theme.LIGHT, setTheme } = useContext(ThemeContext);
+  const { theme = Theme.LIGHT, setTheme, } = useContext(ThemeContext);
 
   const switchTheme = (): void => {
     if (setTheme != null) {
@@ -16,5 +16,5 @@ export const useTheme = (): UseThemeResult => {
     }
   };
 
-  return { theme, switchTheme };
+  return { theme, switchTheme, };
 };

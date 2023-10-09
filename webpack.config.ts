@@ -9,7 +9,7 @@ export default (env: { NODE_ENV: string }): Configuration => {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     build: path.resolve(__dirname, 'dist'),
     htmlTemplate: path.resolve(__dirname, 'public', 'index.html'),
-    src: path.resolve(__dirname, 'src')
+    src: path.resolve(__dirname, 'src'),
   };
   const PORT = 3000;
 
@@ -17,7 +17,7 @@ export default (env: { NODE_ENV: string }): Configuration => {
     mode,
     paths,
     isDev: mode === 'development',
-    port: PORT
+    port: PORT,
   });
 
   return config;
