@@ -1,16 +1,15 @@
-import { FC } from "react";
+import { type FC } from 'react';
 
-import cls from "./navbar.module.scss";
-import { classNames } from "shared/lib/classNames/classNames";
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import Dark from 'shared/assets/icons/dark-theme.svg';
+import cls from './navbar.module.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 interface NavBarProps {
-  className?: string;
+  className?: string
 }
 
-export const NavBar: FC = ({ className = "" }: NavBarProps) => {
+export const NavBar: FC = ({ className = '' }: NavBarProps) => {
   return (
     <nav className={classNames(cls.navbar, {}, [className])}>
        <ThemeSwitcher />

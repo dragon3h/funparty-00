@@ -1,7 +1,5 @@
-declare module "*.scss" {
-  interface IClassNames {
-    [className: string]: string
-  }
+declare module '*.scss' {
+  type IClassNames = Record<string, string>;
   const content: IClassNames;
   export default content;
 }
@@ -9,8 +7,8 @@ declare module "*.scss" {
 declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.png';
-declare module "*.svg" {
-  import React from "react";
+declare module '*.svg' {
+  import type React from 'react';
   const content: React.VFC<React.SVGProps<SVGSVGElement>>;
   export default content;
 }

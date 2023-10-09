@@ -8,7 +8,7 @@ const LangSwitcher = () => {
 
   const toggle = async () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en');
-  }
+  };
 
   return (
     <Button

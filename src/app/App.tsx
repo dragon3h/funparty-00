@@ -1,11 +1,11 @@
-import { FC, Suspense } from "react";
+import { type FC, Suspense } from 'react';
 
 import './styles/index.scss';
-import { useTheme } from "app/providers/ThemeProvider/index";
-import { classNames } from "shared/lib/classNames/classNames";
-import { AppRouter } from "./providers/router";
-import { NavBar } from "widgets/NavBar";
-import { Sidebar } from "widgets/Sidebar/ui/Sidebar";
+import { useTheme } from 'app/providers/ThemeProvider/index';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppRouter } from './providers/router';
+import { NavBar } from 'widgets/NavBar';
+import { Sidebar } from 'widgets/Sidebar/ui/Sidebar';
 
 const App: FC = () => {
   const { theme } = useTheme();
@@ -14,8 +14,8 @@ const App: FC = () => {
     <main
       className={classNames('app', { hovered: false, sdffdsdf: true }, [
         theme,
-        "abc",
-        "222",
+        'abc',
+        '222'
       ])}
     >
       <Suspense fallback="">

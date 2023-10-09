@@ -1,1 +1,1 @@
-export {routeConfig} from './ui/routeGonfig';
+export { routeConfig } from './ui/routeGonfig';

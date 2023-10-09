@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { type FC } from 'react';
 import slc from './ThemeSwitcher.module.scss';
 import { useTheme } from 'app/providers/ThemeProvider';
 import DarkIcon from 'shared/assets/icons/dark-theme.svg';
@@ -14,4 +14,4 @@ export const ThemeSwitcher: FC = () => {
       {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
     </Button>
   );
-}
+};
