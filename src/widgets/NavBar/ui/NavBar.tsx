@@ -9,9 +9,9 @@ interface NavBarProps {
   className?: string
 }
 
-export const NavBar: FC = ({ className = '' }: NavBarProps) => {
+export const NavBar: FC = ({ className = '', }: NavBarProps) => {
   return (
-    <nav className={classNames(cls.navbar, {}, [className])}>
+    <nav className={classNames(cls.navbar, {}, [className])} data-testid="navbar">
        <ThemeSwitcher />
       <div className={cls.links}>
         <AppLink theme={AppLinkTheme.PRIMARY} to="/" className={cls.mainLink}>Home</AppLink>

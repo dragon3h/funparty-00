@@ -1,16 +1,16 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
-import { useState } from 'react';
+import { type FC, useState } from 'react';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const toggle = () => {
+  const toggle = (): void => {
     setCollapsed(prev => !prev);
   };
 
   return (
-        <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed })}>
+        <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed, })}>
             <LangSwitcher />
             <button onClick={toggle}>Toggle</button>
             <p>Sidebar</p>
