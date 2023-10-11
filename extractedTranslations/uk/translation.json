@@ -1,5 +1,7 @@
 {
+  "404": "404",
   "About": "About",
   "Lang": "Lang",
-  "Page": "Page"
+  "Page": "Page",
+  "Page not Found": "Page not Found"
 }
