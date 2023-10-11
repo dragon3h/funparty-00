@@ -3,5 +3,8 @@
   "About": "About",
   "Lang": "Lang",
   "Page": "Page",
-  "Page not Found": "Page not Found"
+  "Page not Found": "Page not Found",
+  "error": "error",
+  "refresh-page": "refresh-page",
+  "toggle": "toggle"
 }
