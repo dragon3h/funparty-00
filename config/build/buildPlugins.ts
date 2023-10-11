@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { ProgressPlugin, type WebpackPluginInstance, DefinePlugin, HotModuleReplacementPlugin } from 'webpack';
 import { type BuildOptions } from './types/config';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
   const progressPlugin = new ProgressPlugin();
@@ -20,6 +21,10 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInst
     __IS_DEV__: JSON.stringify(isDev)
   });
 
+  const bundleAnalyzer = new BundleAnalyzerPlugin({
+    openAnalyzer: false
+  });
+
   const hmrPlugin = new HotModuleReplacementPlugin();
 
   return [
@@ -27,6 +32,7 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInst
     htmlWebpackPlugin,
     miniCssExtractPlugin,
     definePlugin,
+    bundleAnalyzer,
     hmrPlugin
   ];
 }
